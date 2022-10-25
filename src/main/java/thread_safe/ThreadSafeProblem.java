@@ -54,22 +54,29 @@ class Room {
 
     private int count = 0;
 
-    public void increment() {
-        synchronized (this) {
-            count++;
-        }
+    // synchronized加在方法上，同步方法，锁是this对象
+    public synchronized void increment() {
+        count++;
+        /**
+         * synchronized加在代码块上，同步代码块
+         */
+//        synchronized (this) {
+//            count++;
+//        }
     }
 
-    public void decrement() {
-        synchronized (this) {
-            count--;
-        }
+    public synchronized void decrement() {
+        count--;
+//        synchronized (this) {
+//            count--;
+//        }
     }
 
-    public int getCount() {
-        synchronized (this) {
-            return count;
-        }
+    public synchronized int getCount() {
+        return count;
+//        synchronized (this) {
+//            return count;
+//        }
     }
 }
 
