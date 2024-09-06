@@ -7,6 +7,9 @@ import java.util.Hashtable;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * 保护性暂停
+ */
 @Slf4j(topic = "c.ProtectivePause")
 public class ProtectivePause {
 
